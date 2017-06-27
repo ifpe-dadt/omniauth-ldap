@@ -27,10 +27,10 @@ module OmniAuth
 
       def request_phase
         OmniAuth::LDAP::Adaptor.validate @options
-        f = OmniAuth::Form.new(:title => (options[:title] || "LDAP Authentication"), :url => callback_path)
-        f.text_field 'Login', 'username'
-        f.password_field 'Password', 'password'
-        f.button "Sign In"
+        f = OmniAuth::Form.new(:title => (options[:title] || "Acesso.IFPE"), :url => callback_path)
+        f.text_field 'CPF', 'username'
+        f.password_field 'Senha', 'password'
+        f.button "Entrar"
         f.to_response
       end
 
